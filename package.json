@@ -1,0 +1,20 @@
+{
+  "name": "2playerchess",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SpectralGT/2PlayerChess.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SpectralGT/2PlayerChess/issues"
+  },
+  "homepage": "https://github.com/SpectralGT/2PlayerChess#readme"
+}
