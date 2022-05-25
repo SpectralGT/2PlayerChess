@@ -10,21 +10,17 @@ export default class Bishop extends Piece {
 		);
 	}
 
-	isMovePossible(src, dest) {
+	isMovePossible(src:number, dest:number):boolean {
 		return Math.abs(src - dest) % 9 === 0 || Math.abs(src - dest) % 7 === 0;
 	}
 
-	/**
-	 * get path between src and dest (src and dest exclusive)
-	 * @param  {num} src
-	 * @param  {num} dest
-	 * @return {[array]}
-	 */
-	getSrcToDestPath(src, dest) {
+	
+	getSrcToDestPath(src:number, dest:number):Array<number> {
 		let path = [],
 			pathStart,
 			pathEnd,
 			incrementBy;
+
 		if (src > dest) {
 			pathStart = dest;
 			pathEnd = src;
@@ -32,6 +28,7 @@ export default class Bishop extends Piece {
 			pathStart = src;
 			pathEnd = dest;
 		}
+
 		if (Math.abs(src - dest) % 9 === 0) {
 			incrementBy = 9;
 			pathStart += 9;
@@ -43,6 +40,7 @@ export default class Bishop extends Piece {
 		for (let i = pathStart; i < pathEnd; i += incrementBy) {
 			path.push(i);
 		}
+        
 		return path;
 	}
 }
