@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type { Piece } from "../Consts";
+	import type { Piece } from "../Classes/Piece";
 
 	export var piece: Piece;
 	export var OnClick = () => {};
@@ -13,7 +13,7 @@
 	const isValidDestinationColor = "yellow";
 
 	let backgroundColor: string = isWhite ? whiteSquareColor : blackSquareColor;
-	
+
 	// Special square highlighting a picked square or valid destination
 	if (isPicked) {
 		backgroundColor = isPickedColor;

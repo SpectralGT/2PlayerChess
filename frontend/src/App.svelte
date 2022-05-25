@@ -1,6 +1,6 @@
 <script lang="ts">
 	import Square from "./components/Square.svelte";
-    import {Piece} from "./Consts";
+    import {Piece} from "./Classes/Piece";
 </script>
 
 <main >
