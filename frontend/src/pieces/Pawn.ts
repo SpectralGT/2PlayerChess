@@ -1,10 +1,9 @@
 import Piece from "./Piece.js";
 
 export default class Pawn extends Piece {
-
 	initialPositions: Object;
 
-	constructor(player) {
+	constructor(player: number) {
 		super(
 			player,
 			player === 1
@@ -18,12 +17,15 @@ export default class Pawn extends Piece {
 		};
 	}
 
-	isMovePossible(src, dest, isDestEnemyOccupied) {
+	isMovePossible(
+		src: number,
+		dest: number,
+		isDestEnemyOccupied: boolean
+	): boolean {
 		if (this.player === 1) {
 			if (
 				(dest === src - 8 && !isDestEnemyOccupied) ||
-				(dest === src - 16 &&
-					this.initialPositions[1].indexOf(src) !== -1)
+				(dest === src - 16 && this.initialPositions[1].indexOf(src) !== -1)
 			) {
 				return true;
 			} else if (
@@ -32,11 +34,11 @@ export default class Pawn extends Piece {
 			) {
 				return true;
 			}
+			
 		} else if (this.player === 2) {
 			if (
 				(dest === src + 8 && !isDestEnemyOccupied) ||
-				(dest === src + 16 &&
-					this.initialPositions[2].indexOf(src) !== -1)
+				(dest === src + 16 && this.initialPositions[2].indexOf(src) !== -1)
 			) {
 				return true;
 			} else if (
@@ -52,7 +54,6 @@ export default class Pawn extends Piece {
 	getSrcToDestPath(src, dest) {
 		if (dest === src - 16) {
 			return [src - 8];
-            
 		} else if (dest === src + 16) {
 			return [src + 8];
 		}
