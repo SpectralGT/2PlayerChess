@@ -1,8 +1,9 @@
 export default class Piece {
     player:number;
-    style:any
-    constructor(player:number, iconUrl:string){
+    backgroundImage:string;
+    isSelected = false;
+    constructor(player:number, imageURL:string){
       this.player = player;
-      this.style = {backgroundImage: "url('"+iconUrl+"')"};
+      this.backgroundImage = `url(${imageURL})`;
     }
   }

@@ -3,7 +3,7 @@ import Pawn from "../pieces/Pawn.js";
 import Rook from "../pieces/Rook.js";
 import Queen from "../pieces/Queen.js";
 import Bishop from "../pieces/Bishop.js";
-import Knight from "../pieces/knight.js";
+import Knight from "../pieces/Knight.js";
 
 export default function initialiseChessBoard() {
 	const squares = Array(64).fill(null);
